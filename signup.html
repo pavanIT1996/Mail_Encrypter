@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="page1.css" type="text/css" />
+		
+	</head>
+	<body>
+	
+		<div style="float:left">
+			<img src="pictures/mailencrypter.jpg" width="300" height="100"/> &nbsp;
+		</div>
+		<div style="float:none">
+		<nav id="nav">
+			<div style="float:left">		
+				<a href="page1.html" >Home</a>
+				<a href="aboutus.html">AboutUs</a>
+				<a href="contactus.html">ContactUs</a>
+				<a href="faq.html">FAQ</a>
+			</div>
+			<div style="float:right">
+				<a href="login.php">LogIn</a>
+				<a href="" class="active">SignUp</a>
+			</div>
+		</nav>
+		</div>
+		
+		</br></br>
+		
+		
+		<div align="center">
+			
+		<form method="post" action="DB_store.php">
+		<h1>Sign Up</h1>
+		<div align="center">
+		<table>
+			<tr>
+				<td><b>Email</b></td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td><b>First name</b></td>
+				<td><input type="text" name="fname"></td>
+			</tr>
+			<tr>
+				<td><b>Last name</b></td>
+				<td><input type="text" name="lname"></td>
+			</tr>
+			<tr>
+				<td><b>Password</b></td>
+				<td><input type="password" name="pass"></td>
+			</tr>
+			<tr>
+				<td><b>Confirm-Password</b></td>
+				<td><input type="password" name="cpass"></td>
+			</tr>
+			</table>
+			
+			<br/><br/>
+			
+			<input type="submit" name="submit"  value="submit">
+			
+			</div>
+		</form>
+		
+		</div>
+		
+		</br></br></br></br>
+		
+			<div align="center" id="footer">
+					&copy; 2015 Batch2
+			</div>
+	
+	</body>
+</html>

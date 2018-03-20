@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<title>Home Page</title>
+		<link rel="stylesheet" href="page1.css" type="text/css" />
+		<script src="functions.js"></script>
+		
+	</head>
+	<body>
+		<div style="float:left">
+			<img src="pictures/mailencrypter.jpg" width="300" height="100"/> &nbsp;
+		</div> 
+		<div style="float:none">
+		<nav id="nav">
+			<div style="float:left">		
+				<a href="" class="active">Home</a>
+				<a href="aboutus.html">AboutUs</a>
+				<a href="contactus.html">ContactUs</a>
+				<a href="faq.html">FAQ</a>
+			</div>
+			<div style="float:right">
+				<a href="login.php">LogIn</a>
+				<a href="signup.html">SignUp</a>
+			</div>
+		</nav>
+		</div>
+		
+			
+		</br></br>
+	
+	    <h2>Substitution Ciphers</h2>
+
+        <h3>Caesar Cipher</h3>
+        <p>
+        	<i>"The Caesar cipher is another example of Roman ingenuity. First described by the Roman historian Suetonius, it was used by Julius Caesar to communicate secretly with his army:
+			If he had anything confidential to say, he wrote it in cipher, that is, by so changing the order of the letters of the alphabet, that not a word could be made out. If anyone wishes to decipher these, and get at their meaning, he must substitute the fourth letter of the alphabet, namely D, for A, and so with the others."
+			</i> � Suetonius, Life of Julius Caesar
+		</p>
+		<p>
+			Caesar decided on a simple algorithm whereby each letter of the message would be shifted forward 3 places in the alphabet. His cipher looks like this:
+		</p>
+		
+		<table>
+		  <tr>
+		    <td>Plaintext</td>
+		    <td>A</td>
+		    <td>B</td>
+		    <td>C</td>
+		    <td>D</td>
+		    <td>E</td>
+		    <td>F</td>
+		    <td>G</td>
+		    <td>H</td>
+		    <td>I</td>
+		    <td>J</td>
+		    <td>K</td>
+		    <td>L</td>
+		    <td>M</td>
+			<td>N</td>
+		    <td>O</td>
+		    <td>P</td>
+		    <td>Q</td>
+		    <td>R</td>
+		    <td>S</td>
+		    <td>T</td>
+		    <td>U</td>
+		    <td>V</td>
+		    <td>W</td>
+		    <td>X</td>
+		    <td>Y</td>
+		    <td>Z</td>
+		  </tr>
+		 
+		  <tr>
+		    <td>Ciphertext</td>
+		  	<td>D</td>
+		    <td>E</td>
+		    <td>F</td>
+		    <td>G</td>
+		    <td>H</td>
+		    <td>I</td>
+		    <td>J</td>
+		    <td>K</td>
+		    <td>L</td>
+		    <td>M</td>
+			<td>N</td>
+		    <td>O</td>
+		    <td>P</td>
+		    <td>Q</td>
+		    <td>R</td>
+		    <td>S</td>
+		    <td>T</td>
+		    <td>U</td>
+		    <td>V</td>
+		    <td>W</td>
+		    <td>X</td>
+		    <td>Y</td>
+		    <td>Z</td>
+		    <td>A</td>
+		    <td>B</td>
+		    <td>C</td>
+		  </tr>
+		</table>
+
+
+
+		<table align="center">	
+			<tr>
+				<td>Plaintext:</td>
+				<td>Enter some plain text below:<br><textarea id="plainText" rows="5"> </textarea></td>
+			</tr>
+		</table>
+
+		<br/><br/>
+
+		<table align="center" >
+			<tr style="float:left">
+				<td>Ciphertext:</td>
+				<td>The ciphertext should appear here:<br><textarea id="cipherText" rows="5"> </textarea></td>
+			</tr>
+		
+			<tr style="float:right">
+				<td>PlainText:</td>
+				<td>The plain text should appear here:<br><textarea id="plainText2" rows="5"> </textarea></td>
+			</tr>
+		</table>
+		
+		<br/><br/>
+
+		<div align="center">
+		<p>shift: <select id="key" name="key" size="1"> 
+			  <option value="-1" selected="selected">Select Key</option> 	
+			  <option value="0">0</option> 
+			  <option value="1">1</option> 
+			  <option value="2">2</option> 
+			  <option value="3">3</option> 
+			  <option value="4">4</option> 
+			  <option value="5">5</option> 
+			  <option value="6">6</option> 
+			  <option value="7">7</option> 
+			  <option value="8">8</option> 
+			  <option value="9">9</option> 
+			  <option value="10">10</option> 
+			  <option value="11">11</option> 
+			  <option value="12">12</option> 
+			  <option value="13">13</option> 
+			  <option value="14">14</option> 
+			  <option value="15">15</option> 
+			  <option value="16">16</option> 
+			  <option value="17">17</option> 
+			  <option value="18">18</option> 
+			  <option value="19">19</option> 
+			  <option value="20">20</option> 
+			  <option value="21">21</option> 
+			  <option value="22">22</option> 
+			  <option value="23">23</option> 
+			  <option value="24">24</option> 
+			  <option value="25">25</option> 
+		</select></p> 
+		
+		</div>
+
+		<div align="center">
+			<input id="but1" type="button" value="Encipher" onclick="Encrypt()">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			<input id="but3" type="button" value="Clear" onclick="Clear();">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			
+			<input id="but2" type="button" value="Decipher" onclick="Decrypt()">
+		</div>
+		
+		<br/><br/></br></br>
+
+
+			</div>
+			<div align="center" id="footer">
+					&copy; 2015 Batch2
+			</div>
+		</div>
+		
+	</body>
+</html>
